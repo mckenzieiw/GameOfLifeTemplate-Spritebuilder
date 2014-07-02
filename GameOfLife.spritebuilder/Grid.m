@@ -80,8 +80,8 @@ int column;
 
 - (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
 {
-    touchPosition.y/_cellHeight==row;
-    touchPosition.x/_cellWidth==column;
+    touchPosition.y/_cellHeight = row;
+    touchPosition.x/_cellWidth = column;
     return _gridArray[row][column];
     
 }
