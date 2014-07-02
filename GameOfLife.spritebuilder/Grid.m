@@ -12,6 +12,8 @@
 // these are variables that cannot be changed
 static const int GRID_ROWS = 8;
 static const int GRID_COLUMNS = 10;
+int row;
+int column;
 
 @implementation Grid {
     NSMutableArray *_gridArray;
@@ -78,7 +80,10 @@ static const int GRID_COLUMNS = 10;
 
 - (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
 {
-    //get the row and column that was touched, return the Creature inside the corresponding cell
+    touchPosition.y/_cellHeight==row;
+    touchPosition.x/_cellWidth==column;
+    return _gridArray[row][column]
+    
 }
 
 @end
