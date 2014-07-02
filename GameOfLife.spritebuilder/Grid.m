@@ -82,7 +82,7 @@ int column;
 {
     touchPosition.y/_cellHeight==row;
     touchPosition.x/_cellWidth==column;
-    return _gridArray[row][column]
+    return _gridArray[row][column];
     
 }
 
