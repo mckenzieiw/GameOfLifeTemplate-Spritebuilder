@@ -168,7 +168,9 @@ int column;
             BOOL isIndexValid;
             isIndexValid = [self isIndexValidForX:x andY:y];
             
-                        if(currentCreature.livingNeighbors == 3)
+            
+            
+            if(currentCreature.livingNeighbors == 3)
                         {
                             currentCreature.isAlive = true;
                         }
