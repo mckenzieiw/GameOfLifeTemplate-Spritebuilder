@@ -154,14 +154,19 @@ int column;
 {
     for (int i = 0; i < [_gridArray count]; i++)
     {
-        // iterate through all the columns for a given row
         for (int j = 0; j < [_gridArray[i] count]; j++)
         {
+        
+        for (int x = (i-1); x <= (i+1); x++)
+        {
+        // iterate through all the columns for a given row
+        for (int y = (j-1); y <= (j+1); y++)
+        {
             // access the creature in the cell that corresponds to the current row/column
-            Creature *currentCreature = _gridArray[i][j];
+            Creature *currentCreature = _gridArray[x][y];
             
             BOOL isIndexValid;
-            isIndexValid = [self isIndexValidForX:i andY:j];
+            isIndexValid = [self isIndexValidForX:x andY:y];
             
                         if(currentCreature.livingNeighbors == 3)
                         {
@@ -172,7 +177,7 @@ int column;
                             currentCreature.isAlive = false;
                         }
            
-            
+        }
             
         }
     }
