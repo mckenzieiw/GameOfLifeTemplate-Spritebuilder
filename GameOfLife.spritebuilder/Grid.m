@@ -177,9 +177,13 @@ int column;
                     {
                         Creature *creature = _gridArray[x][y];
                         if(currentCreature.livingNeighbors == 3)
+                        {
                             creature.isAlive = true;
+                        }
                         else
+                        {
                             creature.isAlive = false;
+                        }
                         
                     }
                 }
