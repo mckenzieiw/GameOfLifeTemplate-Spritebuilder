@@ -163,7 +163,7 @@ int column;
         for (int y = (j-1); y <= (j+1); y++)
         {
             // access the creature in the cell that corresponds to the current row/column
-            
+            Creature *currentCreature = _gridArray[i][j];
             
             BOOL isIndexValid;
             isIndexValid = [self isIndexValidForX:x andY:y];
