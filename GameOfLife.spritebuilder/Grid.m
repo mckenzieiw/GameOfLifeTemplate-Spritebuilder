@@ -175,11 +175,11 @@ int column;
                     // skip over all cells that are off screen AND the cell that contains the creature we are currently updating
                     if (!((x == i) && (y == j)) && isIndexValid)
                     {
-                        Creature *neighbor = _gridArray[x][y];
+                        Creature *creature = _gridArray[x][y];
                         if(currentCreature.livingNeighbors == 3)
-                            neighbor.isAlive = true;
+                            creature.isAlive = true;
                         else
-                            neighbor.isAlive = false;
+                            creature.isAlive = false;
                         
                     }
                 }
