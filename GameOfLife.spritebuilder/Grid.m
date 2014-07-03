@@ -159,17 +159,17 @@ int column;
         {
             // access the creature in the cell that corresponds to the current row/column
             Creature *currentCreature = _gridArray[i][j];
-            Creature *creature = _gridArray[i][j];
+            
                         if(currentCreature.livingNeighbors == 3)
                         {
-                            creature.isAlive = true;
+                            currentCreature.isAlive = true;
                         }
                         else
                         {
-                            creature.isAlive = false;
+                            currentCreature.isAlive = false;
                         }
                         
-                  
+            
         }
     }
 
