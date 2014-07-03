@@ -174,7 +174,7 @@ int column;
                         {
                             currentCreature.isAlive = true;
                         }
-                        else
+                        if(currentCreature.livingNeighbors != 3)
                         {
                             currentCreature.isAlive = false;
                         }
