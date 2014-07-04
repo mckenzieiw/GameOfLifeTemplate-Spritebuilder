@@ -152,6 +152,7 @@ int column;
 
 -(void)updateCreatures
 {
+    int numAlive = 0;
     for (int i = 0; i < [_gridArray count]; i++)
     {
         for (int j = 0; j < [_gridArray[i] count]; j++)
@@ -173,6 +174,7 @@ int column;
             if(currentCreature.livingNeighbors == 3)
                         {
                             currentCreature.isAlive = true;
+                            numAlive++;
                         }
                         if(currentCreature.livingNeighbors != 3)
                         {
@@ -184,8 +186,10 @@ int column;
         }
         }
     }
+    _totalAlive = numAlive;
 
 }
+
 
 @end
 
